@@ -49,7 +49,27 @@ public class EnemyHP : MonoBehaviour
 
     void die()
     {
+        foreach (AnimatorControllerParameter param in anim.parameters)
+        {
+            anim.SetBool(param.name, false);
+        }
 
+        int choice = Random.Range(0, 3);
+        switch (choice)
+        {
+            case 0: act = "dead0"; break;
+            case 1: act = "dead1"; break;
+            case 2: act = "dead2"; break;
+            default: Debug.Log("ERROR in die animation"); break;
+        }
+        anim.SetBool(act, true);
+
+        standing.height = 1.5f;
+        standing.radius = 1.5f;
+        standing.center = new Vector3(0.1f, 1.5f, 0);
+        dying.enabled = true;
+
+        done = true;
     }
 
     public bool isDead()
