@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: c768fcdda4de14a4590505cda1a3e0c0
+timeCreated: 1547825093
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Monotype Corsiva
+  fontNames:
+  - Monotype Corsiva
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

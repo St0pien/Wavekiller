@@ -1,0 +1,20 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SunSet.cs">
+    <Files>
+      <File FileName="Assets\Scripts\Zoom.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Reload\chest.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\Scaling.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GUI\scall_snd.cs" Line="1" Column="1" />
+      <File FileName="Assets\[BFW]SimpleDynamicClouds\ReadMe.txt" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyNew\WalkAI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Attacks\Strzal.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyNew\HP\EnemyHP.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SunSet.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
