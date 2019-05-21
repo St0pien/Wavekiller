@@ -14,6 +14,5 @@ public class HeadShot : MonoBehaviour
     public void execute()
     {
         parent.damage(1000, 1);
-        Debug.Log("Headshot");
     }
 }

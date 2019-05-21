@@ -11,9 +11,10 @@ public class EnemyHP : MonoBehaviour
     float timer = 0;
 
     public CapsuleCollider standing;
-    public CapsuleCollider dying;
 
     string act; //name of animation
+
+    GameObject[] bodyParts;
 
 	// Use this for initialization
 	void Start ()
@@ -63,12 +64,7 @@ public class EnemyHP : MonoBehaviour
             default: Debug.Log("ERROR in die animation"); break;
         }
         anim.SetBool(act, true);
-
-        standing.height = 1.5f;
-        standing.radius = 1.5f;
-        standing.center = new Vector3(0.1f, 1.5f, 0);
-        dying.enabled = true;
-
+        StartCoroutine(sleep(2.4f));
         done = true;
     }
 
@@ -82,5 +78,22 @@ public class EnemyHP : MonoBehaviour
         {
             return true;
         }
+    }
+
+    IEnumerator sleep(float time)
+    {
+        yield return new WaitForSeconds(time);
+        foreach (GameObject part in bodyParts)
+        {
+            part.SetActive(true);
+        }
+        GetComponent<Animator>().enabled = false;
+        standing.enabled = false;
+        Debug.Log("yup");
+    }
+
+    public void setChildren(GameObject[] parts)
+    {
+        bodyParts = parts;
     }
 }

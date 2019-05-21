@@ -68,7 +68,6 @@ public class Strzal : MonoBehaviour
                         }
                         else
                         {
-                            Debug.Log(go.name);
                             if(go.name == "WaterProDaytime")
                             {
                                 Instantiate(waterHit, hitPoint, Quaternion.identity);
@@ -106,7 +105,6 @@ public class Strzal : MonoBehaviour
         EnemyHP zdrowie = go.GetComponent<EnemyHP>();
         HeadShot head = go.GetComponent<HeadShot>();
 
-        Debug.Log(go);
 
         if(head != null)
         {

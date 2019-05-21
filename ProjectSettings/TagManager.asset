@@ -12,6 +12,7 @@ TagManager:
   - hud
   - sndui
   - sndUI
+  - body
   layers:
   - Default
   - TransparentFX

@@ -19,6 +19,13 @@ public class WalkAI : MonoBehaviour
         body = GetComponent<Animator>();
         leftLeg = gameObject.transform.GetChild(0).GetChild(0).GetChild(1);
         rightLeg = gameObject.transform.GetChild(0).GetChild(0).GetChild(2);
+
+        GameObject [] bodyParts = GameObject.FindGameObjectsWithTag("body");
+        foreach(GameObject part in bodyParts)
+        {
+            part.SetActive(false);
+        }
+        GetComponent<EnemyHP>().setChildren(bodyParts);
     }
 
     // Update is called once per frame
@@ -114,7 +121,7 @@ public class WalkAI : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (grounded && !GetComponent<EnemyHP>().isDead() && !landing)
+        if (grounded && !GetComponent<EnemyHP>().isDead() && !landing && collision.gameObject.name != "Terrain")
         {
             Vector3 point = collision.contacts[0].point;
             float leftDistance = Vector3.Distance(point, leftLeg.position);
@@ -151,18 +158,18 @@ public class WalkAI : MonoBehaviour
     {
         body.SetBool("avoidL", false);
         body.SetBool("avoidR", false);
-        grounded = false;
     }
 
     void engageLanding()
     {
         RaycastHit point;
         Physics.Raycast(new Ray(transform.position, Vector3.down), out point, 4);
-        if (point.collider != null)
+        if (point.collider != null && point.collider.gameObject.tag != "body")
         {
             if (!body.GetBool("fall") && !grounded)
             { 
                 falling();
+                grounded = true;
             }
         }
     }
