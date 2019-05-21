@@ -23,7 +23,10 @@ public class WalkAI : MonoBehaviour
         GameObject [] bodyParts = GameObject.FindGameObjectsWithTag("body");
         foreach(GameObject part in bodyParts)
         {
-            part.SetActive(false);
+            if(part.transform.IsChildOf(transform))
+            {
+                part.SetActive(false);
+            }
         }
         GetComponent<EnemyHP>().setChildren(bodyParts);
     }

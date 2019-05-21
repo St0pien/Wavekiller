@@ -50,21 +50,21 @@ public class EnemyHP : MonoBehaviour
 
     void die()
     {
-        foreach (AnimatorControllerParameter param in anim.parameters)
-        {
-            anim.SetBool(param.name, false);
-        }
-
-        int choice = Random.Range(0, 3);
-        switch (choice)
-        {
-            case 0: act = "dead0"; break;
-            case 1: act = "dead1"; break;
-            case 2: act = "dead2"; break;
-            default: Debug.Log("ERROR in die animation"); break;
-        }
-        anim.SetBool(act, true);
-        StartCoroutine(sleep(2.4f));
+        //foreach (AnimatorControllerParameter param in anim.parameters)
+        //{
+        //    anim.SetBool(param.name, false);
+        //}
+        //
+        //int choice = Random.Range(0, 3);
+        //switch (choice)
+        //{
+        //    case 0: act = "dead0"; break;
+        //    case 1: act = "dead1"; break;
+        //    case 2: act = "dead2"; break;
+        //    default: Debug.Log("ERROR in die animation"); break;
+        //}
+        //anim.SetBool(act, true);
+        StartCoroutine(sleep(0.0f));
         done = true;
     }
 
@@ -85,7 +85,10 @@ public class EnemyHP : MonoBehaviour
         yield return new WaitForSeconds(time);
         foreach (GameObject part in bodyParts)
         {
-            part.SetActive(true);
+            if(part.transform.IsChildOf(transform))
+            {
+                part.SetActive(true);
+            }
         }
         GetComponent<Animator>().enabled = false;
         standing.enabled = false;

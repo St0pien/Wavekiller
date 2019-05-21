@@ -74,7 +74,10 @@ public class Strzal : MonoBehaviour
                             }
                             else
                             {
-                                Instantiate(hole, hitPoint, Quaternion.FromToRotation(Vector3.up, hitInfo.normal));
+                                if(go.tag != "body")
+                                {
+                                    Instantiate(hole, hitPoint, Quaternion.FromToRotation(Vector3.up, hitInfo.normal));
+                                }
                                 Instantiate(pocisk, hitPoint, Quaternion.identity);
                             }
                         }
