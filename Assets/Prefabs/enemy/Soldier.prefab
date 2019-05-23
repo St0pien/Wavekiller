@@ -2744,11 +2744,11 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: 75.50745
+    limit: 40.519623
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
-    limit: 112.76059
+    limit: 83.06492
     bounciness: 0
     contactDistance: 0
   m_AngularYZLimitSpring:

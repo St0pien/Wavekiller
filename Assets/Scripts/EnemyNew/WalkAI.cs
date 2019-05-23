@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class WalkAI : MonoBehaviour
 {
+    public GameObject rightHand;
+
     bool grounded = false;
     bool landing = false;
     GameObject player; //Player object
@@ -182,5 +184,14 @@ public class WalkAI : MonoBehaviour
         yield return new WaitForSeconds(time);
         body.SetBool("fall", false);
         landing = false;
+    }
+
+    void OnAnimatorIK()
+    {
+        Transform pistol = transform.GetChild(3);
+        body.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
+        body.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
+        body.SetIKRotation(AvatarIKGoal.RightHand, pistol.rotation);
+        body.SetIKPosition(AvatarIKGoal.RightHand, pistol.position);
     }
 }

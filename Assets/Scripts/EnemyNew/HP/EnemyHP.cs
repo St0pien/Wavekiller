@@ -92,6 +92,9 @@ public class EnemyHP : MonoBehaviour
         }
         GetComponent<Animator>().enabled = false;
         standing.enabled = false;
+        Transform pistol = transform.GetChild(2);
+        pistol.parent = null; //Drop pistol
+        pistol.gameObject.AddComponent<Rigidbody>();
         Debug.Log("yup");
     }
 
