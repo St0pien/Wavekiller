@@ -386,9 +386,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 18874807}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -697,9 +697,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 92595564}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 1
-  m_AngularDrag: 5
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -1058,6 +1058,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightHand: {fileID: 1759952078}
+  Chest: {fileID: 1837505797}
 --- !u!136 &210639069
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1430,9 +1431,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 279006219}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10118,9 +10119,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 789024474}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 1
-  m_AngularDrag: 5
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -10652,9 +10653,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 891250581}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15184,9 +15185,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1027460787}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 1
-  m_AngularDrag: 5
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15438,9 +15439,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1042095696}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -15973,9 +15974,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1152133211}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 1
-  m_AngularDrag: 5
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16340,9 +16341,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1218592859}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 1
-  m_AngularDrag: 5
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -16535,11 +16536,11 @@ ConfigurableJoint:
     spring: 0
     damper: 0
   m_LowAngularXLimit:
-    limit: -13.517639
+    limit: 13.57402
     bounciness: 0
     contactDistance: 0
   m_HighAngularXLimit:
-    limit: 40.685585
+    limit: 88.34535
     bounciness: 0
     contactDistance: 0
   m_AngularYZLimitSpring:
@@ -16607,9 +16608,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1221397175}
   serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 4
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17048,9 +17049,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1346945490}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -17129,9 +17130,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1395856179}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18103,9 +18104,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1539335883}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -18487,7 +18488,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1660132537}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 1.5, y: 17.807, z: 7.08}
+  m_LocalPosition: {x: 1.5, y: 16.73, z: 7.83}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children: []
   m_Father: {fileID: 685983667}
@@ -18726,14 +18727,14 @@ Transform:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1746243582}
-  m_LocalRotation: {x: 0.06221984, y: 0.020649185, z: 0.99784803, w: -0.0012875599}
-  m_LocalPosition: {x: -2.62, y: -0.58, z: 0.46}
+  m_LocalRotation: {x: -0.05326479, y: -0.0073884446, z: 0.99855316, w: -0.000009952626}
+  m_LocalPosition: {x: -2.524, y: -0.587, z: 0.283}
   m_LocalScale: {x: 12.000037, y: 12.000028, z: 12.000048}
   m_Children:
   - {fileID: 682268559}
   m_Father: {fileID: 1759952079}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 182.371, y: -172.864, z: 0}
+  m_LocalEulerAnglesHint: {x: 179.154, y: -186.107, z: -0.044006348}
 --- !u!1 &1759952078
 GameObject:
   m_ObjectHideFlags: 0
@@ -19060,9 +19061,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1789884391}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 1
-  m_AngularDrag: 5
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19416,9 +19417,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1837505797}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -19684,9 +19685,9 @@ Rigidbody:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1894839753}
   serializedVersion: 2
-  m_Mass: 10
-  m_Drag: 3
-  m_AngularDrag: 100
+  m_Mass: 20
+  m_Drag: 2
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class WalkAI : MonoBehaviour
 {
     public GameObject rightHand;
+    public GameObject Chest;
 
     bool grounded = false;
     bool landing = false;
@@ -197,5 +198,8 @@ public class WalkAI : MonoBehaviour
         body.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
         body.SetIKRotation(AvatarIKGoal.RightHand, pistol.rotation);
         body.SetIKPosition(AvatarIKGoal.RightHand, pistol.position);
+
+        body.SetIKHintPositionWeight(AvatarIKHint.RightElbow, 0.5f);
+        body.SetIKHintPosition(AvatarIKHint.RightElbow, Vector3.down);
     }
 }
