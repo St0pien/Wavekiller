@@ -27,7 +27,10 @@ public class WalkAI : MonoBehaviour
         {
             if(part.transform.IsChildOf(transform))
             {
-                part.SetActive(false);
+                if(part.GetComponent<CapsuleCollider>() != null)
+                {
+                    part.GetComponent<CapsuleCollider>().enabled = false;
+                }
             }
         }
         GetComponent<EnemyHP>().setChildren(bodyParts);
@@ -155,7 +158,7 @@ public class WalkAI : MonoBehaviour
         }
         else
         {
-            grounded = false;
+            //grounded = false;
         }
     }
 
@@ -174,6 +177,7 @@ public class WalkAI : MonoBehaviour
             if (!body.GetBool("fall") && !grounded)
             { 
                 falling();
+
                 grounded = true;
             }
         }
@@ -188,7 +192,7 @@ public class WalkAI : MonoBehaviour
 
     void OnAnimatorIK()
     {
-        Transform pistol = transform.GetChild(3);
+        Transform pistol = transform.GetChild(2);
         body.SetIKPositionWeight(AvatarIKGoal.RightHand, 1);
         body.SetIKRotationWeight(AvatarIKGoal.RightHand, 1);
         body.SetIKRotation(AvatarIKGoal.RightHand, pistol.rotation);

@@ -85,17 +85,18 @@ public class EnemyHP : MonoBehaviour
         yield return new WaitForSeconds(time);
         foreach (GameObject part in bodyParts)
         {
-            if(part.transform.IsChildOf(transform))
+            if (part.transform.IsChildOf(transform))
             {
-                part.SetActive(true);
+                if (part.GetComponent<CapsuleCollider>() != null)
+                {
+                    part.GetComponent<CapsuleCollider>().enabled = true;
+                }
             }
         }
         GetComponent<Animator>().enabled = false;
         standing.enabled = false;
-        Transform pistol = transform.GetChild(2);
-        pistol.parent = null; //Drop pistol
-        pistol.gameObject.AddComponent<Rigidbody>();
-        Debug.Log("yup");
+        transform.GetChild(0).GetComponent<SphereCollider>().enabled = false;
+        GetComponent<Rigidbody>().isKinematic = true;
     }
 
     public void setChildren(GameObject[] parts)

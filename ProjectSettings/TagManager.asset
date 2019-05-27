@@ -13,6 +13,7 @@ TagManager:
   - sndui
   - sndUI
   - body
+  - Pistol
   layers:
   - Default
   - TransparentFX
