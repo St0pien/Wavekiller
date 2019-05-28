@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor.Audio;
 
 public class Shoot : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class Shoot : MonoBehaviour
     public float yOffset; //must be lower than 0
     public float movementSpeed;
     public GameObject rightHand;
+
+    public GameObject sparks;
+    public AudioClip shotSND;
+    public AudioSource snd;
+
     bool shot = false;
     Quaternion startRotation;
     float maxX;
@@ -28,6 +34,8 @@ public class Shoot : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             shot = true;
+            sparks.GetComponent<ParticleSystem>().Play();
+            snd.PlayOneShot(shotSND);
         }
 
         if(shot)
