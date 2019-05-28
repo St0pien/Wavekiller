@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\EnemyNew\HP\BloodDisapear.cs" />
      <Compile Include="Assets\Scripts\EnemyNew\HP\EnemyHP.cs" />
      <Compile Include="Assets\Scripts\EnemyNew\HP\HeadShot.cs" />
+     <Compile Include="Assets\Scripts\EnemyNew\shooting\Shoot.cs" />
      <Compile Include="Assets\Scripts\EnemyNew\WalkAI.cs" />
      <Compile Include="Assets\Scripts\Explosion.cs" />
      <Compile Include="Assets\Scripts\GUI\Bronie.cs" />
