@@ -6,13 +6,11 @@ public class EnemyHP : MonoBehaviour
 {
 
     public float HP = 100;
+    public GameObject pistol;
     Animator anim;
     bool done = false;
-    float timer = 0;
 
     public CapsuleCollider standing;
-
-    string act; //name of animation
 
     GameObject[] bodyParts;
 
@@ -25,16 +23,6 @@ public class EnemyHP : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
-        if(done)
-        {
-            timer += Time.deltaTime;
-        }
-
-        if(timer > 0.1)
-        {
-            anim.SetBool(act, false);
-        }
-
 		if(HP <= 0 && !done)
         {
             die();
@@ -45,27 +33,21 @@ public class EnemyHP : MonoBehaviour
     public void damage(float dmg, float dist)
     {
         HP -= dmg / (dist*0.1f);
-        anim.SetTrigger("hit");
+        float rnd = Random.Range(0, 3);
+        if(rnd > 1)
+        {
+            anim.SetBool("avoidL", true);
+        }
+        else
+        {
+            anim.SetBool("avoidR", true);
+        }
+        StartCoroutine(GetComponent<WalkAI>().disableAvoid());
     }
 
     void die()
     {
-        //foreach (AnimatorControllerParameter param in anim.parameters)
-        //{
-        //    anim.SetBool(param.name, false);
-        //}
-        //
-        //int choice = Random.Range(0, 3);
-        //switch (choice)
-        //{
-        //    case 0: act = "dead0"; break;
-        //    case 1: act = "dead1"; break;
-        //    case 2: act = "dead2"; break;
-        //    default: Debug.Log("ERROR in die animation"); break;
-        //}
-        //anim.SetBool(act, true);
-        StartCoroutine(sleep(0.0f));
-        done = true;
+        endLife();
     }
 
     public bool isDead()
@@ -80,9 +62,8 @@ public class EnemyHP : MonoBehaviour
         }
     }
 
-    IEnumerator sleep(float time)
+    void endLife()
     {
-        yield return new WaitForSeconds(time);
         foreach (GameObject part in bodyParts)
         {
             if (part.transform.IsChildOf(transform))
@@ -97,6 +78,11 @@ public class EnemyHP : MonoBehaviour
         standing.enabled = false;
         transform.GetChild(0).GetComponent<SphereCollider>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
+
+        //drop Pistol
+        pistol.transform.parent = null;
+        pistol.AddComponent<Rigidbody>();
+        done = true;
     }
 
     public void setChildren(GameObject[] parts)

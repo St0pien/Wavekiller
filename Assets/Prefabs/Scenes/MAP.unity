@@ -1045,6 +1045,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 100
+  pistol: {fileID: 1746243582}
   standing: {fileID: 210639069}
 --- !u!114 &210639068
 MonoBehaviour:
@@ -1106,6 +1107,7 @@ MonoBehaviour:
   xOffset: 4
   yOffset: 3.2
   movementSpeed: 1
+  timeDelay: 0.15
   rightHand: {fileID: 1660132537}
   sparks: {fileID: 1497995525}
   shotSND: {fileID: 8300000, guid: db539433c898ef848bfc02cd6b1fdaef, type: 3}

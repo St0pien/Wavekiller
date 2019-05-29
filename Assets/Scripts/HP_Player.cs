@@ -90,6 +90,8 @@ public class HP_Player : MonoBehaviour
         {
             Load.LoadScene("Death");
         }
+
+        zdrowie = Mathf.Round(zdrowie);
     }
 
 }

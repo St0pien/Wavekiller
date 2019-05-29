@@ -130,8 +130,9 @@ public class WalkAI : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (grounded && !GetComponent<EnemyHP>().isDead() && !landing && collision.gameObject.name != "Terrain")
+        if (grounded && !GetComponent<EnemyHP>().isDead() && !landing)
         {
+            Debug.Log(collision.gameObject);
             Vector3 point = collision.contacts[0].point;
             float leftDistance = Vector3.Distance(point, leftLeg.position);
             float rightDistance = Vector3.Distance(point, rightLeg.position);
@@ -148,6 +149,7 @@ public class WalkAI : MonoBehaviour
                 body.SetBool("avoidR", false);
                 body.SetBool("avoidL", true);
             }
+            StartCoroutine(disableAvoid());
         }
     }
 
@@ -178,8 +180,6 @@ public class WalkAI : MonoBehaviour
             if (!body.GetBool("fall") && !grounded)
             { 
                 falling();
-
-                grounded = true;
             }
         }
     }
@@ -201,5 +201,12 @@ public class WalkAI : MonoBehaviour
 
         body.SetIKHintPositionWeight(AvatarIKHint.RightElbow, 0.5f);
         body.SetIKHintPosition(AvatarIKHint.RightElbow, Vector3.down);
+    }
+
+    public IEnumerator disableAvoid()
+    {
+        yield return new WaitForSeconds(1);
+        body.SetBool("avoidR", false);
+        body.SetBool("avoidL", false);
     }
 }
