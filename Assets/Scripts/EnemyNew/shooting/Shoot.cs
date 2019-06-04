@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Audio;
 
 public class Shoot : MonoBehaviour
 {
@@ -77,10 +76,12 @@ public class Shoot : MonoBehaviour
     void decideToShoot()
     {
         RaycastHit hit;
-        Ray ray = new Ray(transform.position+new Vector3(0, 1.5f, 0), transform.forward);
+        Vector3 target = GameObject.FindWithTag("Player").transform.position - transform.position - new Vector3(0, 1, 0);
+        Debug.DrawRay(transform.position + new Vector3(0, 1.5f, 0), target, Color.red, 1000);
+        Ray ray = new Ray(transform.position+new Vector3(0, 1.5f, 0), target);
         Physics.Raycast(ray, out hit, 100);
 
-        if(hit.collider.gameObject.tag == "Player")
+        if(hit.collider.gameObject.tag == "Player" && GetComponent<WalkAI>().isGrounded())
         {
             float rnd = Random.Range(0, 10)*dist*30;
             if(rnd < 1 && !shot && shotDelay > timeDelay)

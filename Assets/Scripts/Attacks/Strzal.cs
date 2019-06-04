@@ -44,7 +44,11 @@ public class Strzal : MonoBehaviour
             odlicz = 0;
             isShooting = true;
 
-            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+            Vector3 rayStart = Camera.main.transform.position;
+            rayStart += Camera.main.transform.forward;
+            Debug.DrawRay(rayStart, Camera.main.transform.forward, Color.red, 1000);
+
+            Ray ray = new Ray(rayStart, Camera.main.transform.forward);
 
             RaycastHit hitInfo;
 

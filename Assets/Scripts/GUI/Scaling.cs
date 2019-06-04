@@ -24,6 +24,7 @@ public class Scaling : MonoBehaviour
         hud[5] = GameObject.Find("stamina");
         hud[6] = GameObject.Find("Ammo");
         hud[7] = GameObject.Find("Cross");
+        hud[8] = GameObject.Find("Trafienie");
 
         wid = Screen.width;
         hei = Screen.height;

@@ -26,6 +26,7 @@ public class weapons_r : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
     {
+        ak_active = GameObject.Find("Interfejs").GetComponent<Bronie>().gun;
         on_r();
         on_strzal();
         change_UI();

@@ -11,7 +11,6 @@ public class Load : MonoBehaviour
     {
         loadingScene = sceneName;
         SceneManager.LoadScene("loadScreen");
-        Debug.Log("Ładowanie: " + loadingScene);
     }
 
     public static string getloadscene()

@@ -35,7 +35,6 @@ public class Respawn : MonoBehaviour
         {
             czas = 10;
             fala++;
-            Debug.Log(fala);
             ile = Mathf.Round((fala / 3) + 1);
 
             for (int i = 1; i <= ile; i++)

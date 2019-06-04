@@ -132,7 +132,6 @@ public class WalkAI : MonoBehaviour
     {
         if (grounded && !GetComponent<EnemyHP>().isDead() && !landing)
         {
-            Debug.Log(collision.gameObject);
             Vector3 point = collision.contacts[0].point;
             float leftDistance = Vector3.Distance(point, leftLeg.position);
             float rightDistance = Vector3.Distance(point, rightLeg.position);
@@ -208,5 +207,10 @@ public class WalkAI : MonoBehaviour
         yield return new WaitForSeconds(1);
         body.SetBool("avoidR", false);
         body.SetBool("avoidL", false);
+    }
+
+    public bool isGrounded()
+    {
+        return grounded;
     }
 }

@@ -45,7 +45,6 @@ public class Rocket_detonation : MonoBehaviour
         if (Vector3.Distance(transform.position, Camera.main.transform.position) < zasieg)
         {
             float dmg = 1 - (Vector3.Distance(transform.position, Camera.main.transform.position) / zasieg);
-            Debug.Log("JEEEEEEEEEEEE");
 
             GameObject.Find("FPSController").GetComponent<HP_Player>().otrzymaneobrażenia(Mathf.Round(obrazenia * dmg));
         }

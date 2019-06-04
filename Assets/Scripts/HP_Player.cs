@@ -73,7 +73,7 @@ public class HP_Player : MonoBehaviour
         }
         else if (dostalem)
         {
-            GameObject.Find("Trafienie").GetComponent<Image>().color = new Color(1, 0, 0, 0.9f);
+            GameObject.Find("Trafienie").GetComponent<Image>().color = new Color(1, 0, 0, 1);
             if (czas <= 0)
             {
                 Player.PlayOneShot(AOU);
