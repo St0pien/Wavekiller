@@ -34,15 +34,17 @@ public class HP_Player : MonoBehaviour
 
     public void otrzymaneobrażenia(float amt)
     {
-        dostalem = true;
-        zdrowie -= amt;
-
-        if (zdrowie <= 0)
+        if(zdrowie > 0)
         {
-            death = true;
-            deadSeconds = 0;
-        }
+            dostalem = true;
+            zdrowie -= amt;
 
+            if (zdrowie <= 0)
+            {
+                death = true;
+                deadSeconds = 0;
+            }
+        }
     }
 	
 	public void Die() //things to do before dead

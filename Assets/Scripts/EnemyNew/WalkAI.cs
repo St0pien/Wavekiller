@@ -200,6 +200,9 @@ public class WalkAI : MonoBehaviour
 
         body.SetIKHintPositionWeight(AvatarIKHint.RightElbow, 0.5f);
         body.SetIKHintPosition(AvatarIKHint.RightElbow, Vector3.down);
+
+        body.SetLookAtPosition(player.transform.position);
+        body.SetLookAtWeight(1);
     }
 
     public IEnumerator disableAvoid()

@@ -13,6 +13,7 @@ public class Shoot : MonoBehaviour
     public GameObject sparks;
     public AudioClip shotSND;
     public AudioSource snd;
+    public GameObject pistol;
 
     bool shot = false;
     Quaternion startRotation;
@@ -77,7 +78,7 @@ public class Shoot : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 target = GameObject.FindWithTag("Player").transform.position - transform.position - new Vector3(0, 1, 0);
-        Debug.DrawRay(transform.position + new Vector3(0, 1.5f, 0), target, Color.red, 1000);
+        setPistolTransform();
         Ray ray = new Ray(transform.position+new Vector3(0, 1.5f, 0), target);
         Physics.Raycast(ray, out hit, 100);
 
@@ -99,5 +100,13 @@ public class Shoot : MonoBehaviour
 
             GameObject.Find("FPSController").GetComponent<HP_Player>().otrzymaneobrażenia(damage);
         }
+    }
+
+    void setPistolTransform()
+    {
+        Transform hand = transform.GetChild(2);
+        Vector3 playerPosition = GameObject.FindWithTag("Player").transform.position;
+        hand.position = playerPosition;
+        //hand.rotation = Quaternion.LookRotation(playerPosition - pistol.transform.position);
     }
 }

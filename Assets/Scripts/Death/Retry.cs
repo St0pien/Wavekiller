@@ -52,8 +52,11 @@ public class Retry : MonoBehaviour
 
     void shovelAnim()
     {
-        map = true;
-        time = 0;
-        Instantiate(shovel);
+        if(!map)
+        {
+            map = true;
+            time = 0;
+            Instantiate(shovel);
+        }
     }
 }
