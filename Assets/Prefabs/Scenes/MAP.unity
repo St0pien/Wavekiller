@@ -12893,6 +12893,26 @@ Prefab:
       propertyPath: m_LocalPosition.z
       value: -0.0069
       objectReference: {fileID: 0}
+    - target: {fileID: 114473719339825186, guid: c1cc6ec91215d354895e7a77cad97fe2,
+        type: 2}
+      propertyPath: handOffset.z
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114473719339825186, guid: c1cc6ec91215d354895e7a77cad97fe2,
+        type: 2}
+      propertyPath: handOffset.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114473719339825186, guid: c1cc6ec91215d354895e7a77cad97fe2,
+        type: 2}
+      propertyPath: yOffset
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114473719339825186, guid: c1cc6ec91215d354895e7a77cad97fe2,
+        type: 2}
+      propertyPath: xOffset
+      value: -1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1cc6ec91215d354895e7a77cad97fe2, type: 2}
   m_IsPrefabParent: 0
