@@ -19,9 +19,10 @@ public class Shoot : MonoBehaviour
 
     float shotDelay = 0;
     float dist;
+    float recoil = 0;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         startRotation = rightHand.transform.localRotation;
     }
@@ -41,6 +42,8 @@ public class Shoot : MonoBehaviour
                 sparks.GetComponent<ParticleSystem>().Play();
                 snd.PlayOneShot(shotSND);
                 checkHit();
+                recoil = 0.2f*Vector3.Distance(transform.position, GameObject.FindWithTag("Player").transform.position);
+                shot = false;
             }
         }
 	}
@@ -78,10 +81,18 @@ public class Shoot : MonoBehaviour
         Transform hand = transform.GetChild(2);
         Vector3 playerPosition = GameObject.FindWithTag("Player").transform.position+new Vector3(0,1,0);
         hand.position = playerPosition;
-        hand.rotation = Quaternion.LookRotation(playerPosition - pistol.transform.position)*handOffset;
-        if(shot)
+        Quaternion rotation = Quaternion.LookRotation(playerPosition + shootAnim() - pistol.transform.position) * handOffset;
+        hand.rotation = Quaternion.Slerp(rotation, hand.rotation, Time.deltaTime*movementSpeed);
+    }
+
+    Vector3 shootAnim()
+    {
+        recoil -= Time.deltaTime*movementSpeed*20;
+        if(recoil < 0)
         {
-            shot = false;
+            recoil = 0;
         }
+
+        return new Vector3(0, recoil, 0);
     }
 }
