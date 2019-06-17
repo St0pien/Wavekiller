@@ -12,7 +12,7 @@ public class startPosition : MonoBehaviour
         float x, z;
         x = Random.Range(200, 800);
         z = Random.Range(200, 800);
-        Vector3 position = new Vector3(x, 25, z);
+        Vector3 position = new Vector3(x, 50, z);
         player.transform.position = position;
 	}
 	
