@@ -32,7 +32,7 @@ public class EnemyHP : MonoBehaviour
 
     public void damage(float dmg, float dist)
     {
-        HP -= dmg / (dist*0.1f);
+        HP -= dmg + dist/10;
         float rnd = Random.Range(0, 3);
         if(rnd > 1)
         {
@@ -78,6 +78,8 @@ public class EnemyHP : MonoBehaviour
         standing.enabled = false;
         transform.GetChild(0).GetComponent<SphereCollider>().enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
+        Auto_Destruct destroy = gameObject.AddComponent<Auto_Destruct>();
+        destroy.duration = 90;
 
         //drop Pistol
         pistol.transform.parent = null;
