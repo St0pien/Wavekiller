@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class AsyncLoad : MonoBehaviour
 {
     string scenename;
+
+    public GameObject slider;
 	// Use this for initialization
 	void Start ()
     {
@@ -26,6 +28,7 @@ public class AsyncLoad : MonoBehaviour
 
         while(!sceneLoading.isDone)
         {
+            slider.GetComponent<Slider>().value = sceneLoading.progress;
             yield return null;
         }
     }
