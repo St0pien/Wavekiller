@@ -66,6 +66,7 @@
      <Compile Include="Assets\Scripts\Enemies_Attacks\Enemys2.cs" />
      <Compile Include="Assets\Scripts\Enemies_Attacks\pocisk_hit.cs" />
      <Compile Include="Assets\Scripts\Enemies_Attacks\pocisk_lot.cs" />
+     <Compile Include="Assets\Scripts\EnemyNew\FlashLight.cs" />
      <Compile Include="Assets\Scripts\EnemyNew\HP\BloodDisapear.cs" />
      <Compile Include="Assets\Scripts\EnemyNew\HP\EnemyHP.cs" />
      <Compile Include="Assets\Scripts\EnemyNew\HP\HeadShot.cs" />

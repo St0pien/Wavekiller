@@ -17,13 +17,11 @@ public class Music : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(Camera.main.clearFlags);
         if(Camera.main.clearFlags != CameraClearFlags.SolidColor)
         {
             if(!glosnik.isPlaying)
             {
                 glosnik.PlayOneShot(nature);
-                Debug.Log("gram");
             }
         }
     }
