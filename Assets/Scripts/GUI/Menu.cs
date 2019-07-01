@@ -35,7 +35,7 @@ public class Menu : MonoBehaviour
         manuUI = (Canvas)GetComponent<Canvas>();//Pobranie menu głównego.
         Options = Options.GetComponent<Canvas>();
 
-        quitMenu = quitMenu.GetComponent<Canvas>(); //Pobranie menu pytania o wyjście z gry.
+        //quitMenu = quitMenu.GetComponent<Canvas>(); //Pobranie menu pytania o wyjście z gry.
 
         btnStart = btnStart.GetComponent<Button>();//Ustawienie przycisku uruchomienia gry.
         btnExit = btnExit.GetComponent<Button>();//Ustawienie przycisku wyjścia z gry.
