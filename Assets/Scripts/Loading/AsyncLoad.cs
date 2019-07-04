@@ -28,7 +28,6 @@ public class AsyncLoad : MonoBehaviour
 
         while(!sceneLoading.isDone)
         {
-            Debug.Log(sceneLoading.progress);
             slider.GetComponent<Slider>().value = sceneLoading.progress;
             yield return null;
         }

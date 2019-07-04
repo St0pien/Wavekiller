@@ -25,6 +25,7 @@ public class Respawn : MonoBehaviour
 	void Start ()
     {
         XYZ.y = 100;
+        stats.GetComponent<TextMesh>().text = "0 waves of enemies";
     }
 	
 	// Update is called once per frame
@@ -63,5 +64,10 @@ public class Respawn : MonoBehaviour
         int fal = fala - 1;
         string wave = fal.ToString();
         stats.GetComponent<TextMesh>().text = wave + " waves of enemies";
+    }
+
+    public int getWave()
+    {
+        return fala - 1;
     }
 }

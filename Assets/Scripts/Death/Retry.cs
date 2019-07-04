@@ -23,7 +23,8 @@ public class Retry : MonoBehaviour
         sndShovel = shovel.GetComponent<AudioSource>();
         Time.timeScale = 1;
         Instantiate(stats);
-        Instantiate(stats1);
+        GameObject waves = Instantiate(stats1);
+        waves.GetComponent<TextMesh>().text = Load.getWaves() + " waves of enemies";
     }
 
     // Update is called once per frame
@@ -40,13 +41,13 @@ public class Retry : MonoBehaviour
         //Back to menu
         if(Input.GetKeyDown(KeyCode.Escape))
         {
-            Load.LoadScene("MEnu");
+            Load.LoadScene("MEnu", null);
         }
 
         //Restart Game
         if(time > 1 && map)
         {
-            Load.LoadScene("MAP");
+            Load.LoadScene("MAP", null);
         }
 	}
 

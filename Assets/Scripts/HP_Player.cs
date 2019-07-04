@@ -90,7 +90,7 @@ public class HP_Player : MonoBehaviour
         }
         if(deadSeconds >= 0.2 && death)
         {
-            Load.LoadScene("Death");
+            Load.LoadScene("Death", GameObject.Find("Sun").GetComponent<Respawn>().getWave().ToString());
         }
 
         zdrowie = Mathf.Round(zdrowie);

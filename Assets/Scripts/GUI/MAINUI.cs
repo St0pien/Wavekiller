@@ -5,13 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class MAINUI : MonoBehaviour
 {
+    public GameObject Help;
+    public GameObject Flames;
 
 	// Use this for initialization
 	public void B_Start ()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        Load.LoadScene("MAP");
+        Load.LoadScene("MAP", null);
     }
 	
 	// Update is called once per frame
@@ -19,6 +21,20 @@ public class MAINUI : MonoBehaviour
     {
         Application.Quit();
 	}
+
+    public void help()
+    {
+        Flames.SetActive(false);
+        Help.SetActive(true);
+        Debug.Log("help");
+    }
+
+    public void back()
+    {
+        Flames.SetActive(true);
+        Help.SetActive(false);
+        Debug.Log("back");
+    }
 
     private void Start()
     {

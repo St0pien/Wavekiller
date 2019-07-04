@@ -10,6 +10,8 @@ public class RocketShot : MonoBehaviour
     public GameObject Rakieta;
     public GameObject target_prefab;
 
+    public GameObject aim;
+
     public AudioSource gracz;
     public AudioClip pal;
 
@@ -34,7 +36,13 @@ public class RocketShot : MonoBehaviour
     void Update ()
     {
         odlicz -= Time.deltaTime;
-        if(GameObject.Find("ładunek(Clone)") == null)
+
+        if(odlicz > 0)
+        {
+            aim.SetActive(false);
+        }
+
+        if (GameObject.Find("ładunek(Clone)") == null)
         {
             if(odlicz <= -10)
             Destroy(GameObject.Find("Explosion(Clone)"));
